@@ -1,0 +1,130 @@
+<?php
+
+namespace App\Repositories;
+
+<<<<<<< HEAD
+use App\Http\Requests\LanguageRequest;
+use App\Models\Language;
+use Arafat\LaravelRepository\Repository;
+=======
+use Abedin\Maker\Repositories\Repository;
+use App\Http\Requests\LanguageRequest;
+use App\Models\Language;
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)
+
+class LanguageRepository extends Repository
+{
+    public static function model()
+    {
+        return Language::class;
+    }
+
+    public static function checkFileExitsOrNot(array $fileNames)
+    {
+        foreach ($fileNames as $name) {
+<<<<<<< HEAD
+            if (!self::isNameExists($name)) {
+                self::create([
+                    'title' => $name,
+=======
+            if (! self::isNameExists($name)) {
+                $title = $name;
+                if ($name == 'en') {
+                    $title = 'English';
+                } elseif ($name == 'ar') {
+                    $title = 'Arabic';
+                } elseif ($name == 'bn') {
+                    $title = 'Bengali';
+                }
+
+                self::create([
+                    'title' => $title,
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)
+                    'name' => $name,
+                ]);
+            }
+        }
+    }
+
+    public static function storeByRequest(LanguageRequest $request)
+    {
+        $filePath = base_path("lang/$request->name.json");
+
+<<<<<<< HEAD
+        $jsonData = file_get_contents(public_path('defualt/emptyLanguage.json'));
+
+        file_put_contents($filePath, $jsonData, JSON_PRETTY_PRINT);
+
+        return self::create([
+            'title' => $request->title,
+            'name' => $request->name,
+        ]);
+    }
+
+    public static function updateByRequest(Language $language, LanguageRequest $request, $filePath): Language
+=======
+        $jsonData = file_get_contents(public_path('default/emptyLanguage.json'));
+
+        try {
+            file_put_contents($filePath, $jsonData, JSON_PRETTY_PRINT);
+
+            self::create([
+                'title' => $request->title,
+                'name' => $request->name,
+            ]);
+
+            return ['type' => 'success', 'message' => __('Created Successfully')];
+        } catch (\Throwable $e) {
+            return ['type' => 'error', 'message' => $e->getMessage()];
+        }
+    }
+
+    public static function updateByRequest(Language $language, LanguageRequest $request, $filePath)
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)
+    {
+        $processedData = [];
+
+        foreach ($request->data as $entry) {
+            $key = $entry['key'];
+<<<<<<< HEAD
+            $value = array_key_exists('value', $entry) ? $entry['value'] : "";
+=======
+            $value = array_key_exists('value', $entry) ? $entry['value'] : '';
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)
+            $processedData[$key] = $value;
+        }
+
+        $existingData = json_decode(file_get_contents($filePath), true);
+
+        $updatedData = array_merge($existingData, $processedData);
+
+<<<<<<< HEAD
+        file_put_contents($filePath, json_encode($updatedData, JSON_PRETTY_PRINT));
+
+        $language->update([
+            'title' => $request->title,
+        ]);
+
+        return $language;
+=======
+        try {
+            file_put_contents($filePath, json_encode($updatedData, JSON_PRETTY_PRINT));
+
+            $language->update([
+                'title' => $request->title,
+            ]);
+
+            return $language;
+
+            return ['type' => 'success', 'message' => __('Updated Successfully')];
+        } catch (\Throwable $e) {
+            return ['type' => 'error', 'message' => $e->getMessage()];
+        }
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)
+    }
+
+    public static function isNameExists($name)
+    {
+        return self::query()->where('name', $name)->exists();
+    }
+}

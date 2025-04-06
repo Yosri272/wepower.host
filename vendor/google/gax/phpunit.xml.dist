@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" bootstrap="tests/bootstrap.php" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd" colors="true">
+  <php>
+<<<<<<< HEAD
+    <env name="GOOGLE_APPLICATION_CREDENTIALS" value="tests/Tests/Unit/testdata/json-key-file.json"/>
+=======
+    <env name="GOOGLE_APPLICATION_CREDENTIALS" value="tests/Unit/testdata/json-key-file.json"/>
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)
+  </php>
+  <coverage>
+    <include>
+      <directory suffix=".php">src/ApiCore</directory>
+    </include>
+  </coverage>
+  <testsuites>
+    <testsuite name="unit">
+<<<<<<< HEAD
+      <directory>tests/Tests/Unit</directory>
+=======
+      <directory>tests/Unit</directory>
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)
+    </testsuite>
+  </testsuites>
+</phpunit>

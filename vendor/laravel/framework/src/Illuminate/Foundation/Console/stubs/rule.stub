@@ -1,0 +1,23 @@
+<?php
+
+namespace {{ namespace }};
+
+use Closure;
+use Illuminate\Contracts\Validation\ValidationRule;
+
+class {{ class }} implements ValidationRule
+{
+    /**
+     * Run the validation rule.
+     *
+<<<<<<< HEAD
+     * @param  \Closure(string): \Illuminate\Translation\PotentiallyTranslatedString  $fail
+=======
+     * @param  \Closure(string, ?string=): \Illuminate\Translation\PotentiallyTranslatedString  $fail
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)
+     */
+    public function validate(string $attribute, mixed $value, Closure $fail): void
+    {
+        //
+    }
+}

@@ -1,0 +1,19 @@
+<?php
+
+namespace {{ namespace }};
+
+<<<<<<< HEAD
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+=======
+{{ factoryImport }}
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)
+use Illuminate\Database\Eloquent\Model;
+
+class {{ class }} extends Model
+{
+<<<<<<< HEAD
+    use HasFactory;
+=======
+    {{ factory }}
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)
+}

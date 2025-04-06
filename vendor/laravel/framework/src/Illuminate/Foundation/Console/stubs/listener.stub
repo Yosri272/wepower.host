@@ -1,0 +1,33 @@
+<?php
+
+namespace {{ namespace }};
+
+<<<<<<< HEAD
+use {{ eventNamespace }};
+=======
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Queue\InteractsWithQueue;
+
+class {{ class }}
+{
+    /**
+     * Create the event listener.
+     */
+    public function __construct()
+    {
+        //
+    }
+
+    /**
+     * Handle the event.
+     */
+<<<<<<< HEAD
+    public function handle({{ event }} $event): void
+=======
+    public function handle(object $event): void
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)
+    {
+        //
+    }
+}

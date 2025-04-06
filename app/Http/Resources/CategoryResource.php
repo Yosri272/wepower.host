@@ -1,0 +1,33 @@
+<?php
+
+namespace App\Http\Resources;
+
+use Illuminate\Http\Request;
+use Illuminate\Http\Resources\Json\JsonResource;
+
+class CategoryResource extends JsonResource
+{
+    /**
+     * Transform the resource into an array.
+     *
+     * @return array<string, mixed>
+     */
+    public function toArray(Request $request): array
+    {
+<<<<<<< HEAD
+        return [
+            'id' => $this->id ?? null,
+            'name' => $this->name ?? null,
+=======
+        $lang = request()->header('accept-language') ?? 'en';
+        $translation = $lang != 'en' ? $this->translations()?->where('lang', $lang)->first() : null;
+
+        return [
+            'id' => $this->id ?? null,
+            'name' => $translation ? $translation->name : ($this->name ?? null),
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)
+            'thumbnail' => $this->thumbnail ?? null,
+            'sub_categories' => SubCategoryResource::collection($this->subCategories ?? []),
+        ];
+    }
+}

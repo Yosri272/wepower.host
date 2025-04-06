@@ -1,0 +1,80 @@
+<<<<<<< HEAD
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+=======
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Cairo&display=swap");
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+<<<<<<< HEAD
+    --primary: #EE456B;
+    --primary-50: #FFF1F3;
+    --primary-100: #FEE5E8;
+    --primary-200: #FCCFD6;
+    --primary-300: #FAA7B5;
+    --primary-400: #F7758F;
+    --primary-500: #EE456B;
+    --primary-600: #DD2C5C;
+    --primary-700: #B91747;
+    --primary-800: #9B1642;
+    --primary-900: #84173E;
+    --primary-950: #4A071D;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+=======
+    --primary: #ffffff;
+    --primary-50: #ffffff;
+    --primary-100: #ffffff;
+    --primary-200: #ffffff;
+    --primary-300: #ffffff;
+    --primary-400: #ffffff;
+    --primary-500: #ffffff;
+    --primary-600: #ffffff;
+    --primary-700: #ffffff;
+    --primary-800: #ffffff;
+    --primary-900: #ffffff;
+    --primary-950: #ffffff;
+}
+
+body {
+    font-family: "Roboto", "Cairo", sans-serif;
+}
+
+
+
+
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)
+.main-container {
+    @apply px-4 md:px-8 lg:px-16;
+}
+
+.pagination-container {
+    @apply flex items-center justify-center gap-[10px] flex-wrap;
+}
+
+.paginate-buttons {
+<<<<<<< HEAD
+    @apply border text-slate-500 w-10 h-10 cursor-pointer rounded-[10px] border-slate-200 justify-center items-center flex hover:bg-primary-100;
+=======
+    @apply border text-slate-500 w-8 h-8 sm:w-10 sm:h-10 cursor-pointer rounded-[10px] border-slate-200 justify-center items-center flex hover:bg-primary-100;
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)
+}
+
+.active-page {
+    @apply bg-primary text-white border-primary hover:bg-primary;
+}
+<<<<<<< HEAD
+=======
+
+.vs__dropdown-toggle {
+    padding: 9px 6px !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 8px !important;
+}
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)

@@ -1,0 +1,7 @@
+providers:
+  - Laravel\Sanctum\SanctumServiceProvider
+<<<<<<< HEAD
+=======
+migrations:
+  - database/migrations
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)

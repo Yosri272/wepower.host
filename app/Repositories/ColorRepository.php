@@ -1,0 +1,93 @@
+<?php
+
+namespace App\Repositories;
+
+<<<<<<< HEAD
+use App\Http\Requests\ColorRequest;
+use App\Models\Color;
+=======
+use Abedin\Maker\Repositories\Repository;
+use App\Http\Requests\ColorRequest;
+use App\Models\Color;
+use App\Models\TranslateUtility;
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)
+
+class ColorRepository extends Repository
+{
+    /**
+     * base method
+     *
+     * @method model()
+     */
+    public static function model()
+    {
+        return Color::class;
+    }
+
+    /**
+     * store a new color
+     */
+    public static function storeByRequest(ColorRequest $request): Color
+    {
+<<<<<<< HEAD
+        return self::create([
+            'name' => $request->name,
+            'color_code' => $request->color_code,
+            'shop_id' => auth()->user()->shop->id,
+            'is_active' => true,
+        ]);
+=======
+        $shop = generaleSetting('rootShop');
+
+        $color = self::create([
+            'name' => $request->name,
+            'color_code' => $request->color_code,
+            'shop_id' => $shop->id,
+            'is_active' => true,
+        ]);
+
+        // create translation
+        foreach ($request->names ?? [] as $lang => $name) {
+            if (! $lang || ! $name) {
+                continue;
+            }
+            TranslateUtility::create([
+                'color_id' => $color->id,
+                'name' => $name,
+                'lang' => $lang,
+            ]);
+        }
+
+        return $color;
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)
+    }
+
+    /**
+     * update a color
+     */
+    public static function updateByRequest(ColorRequest $request, Color $color): Color
+    {
+        $color->update([
+            'name' => $request->name,
+            'color_code' => $request->color_code,
+        ]);
+
+<<<<<<< HEAD
+=======
+        // update and create translation
+        foreach ($request->names ?? [] as $lang => $name) {
+            if (! $lang || ! $name) {
+                continue;
+            }
+            TranslateUtility::updateOrCreate([
+                'color_id' => $color->id,
+                'lang' => $lang,
+            ], [
+                'name' => $name,
+            ]);
+        }
+
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)
+        return $color;
+    }
+}

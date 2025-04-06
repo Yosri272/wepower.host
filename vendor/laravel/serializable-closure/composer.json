@@ -1,0 +1,67 @@
+{
+    "name": "laravel/serializable-closure",
+    "description": "Laravel Serializable Closure provides an easy and secure way to serialize closures in PHP.",
+    "keywords": ["laravel", "Serializable", "closure"],
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/laravel/serializable-closure/issues",
+        "source": "https://github.com/laravel/serializable-closure"
+    },
+    "authors": [
+        {
+            "name": "Taylor Otwell",
+            "email": "taylor@laravel.com"
+        },
+        {
+            "name": "Nuno Maduro",
+            "email": "nuno@laravel.com"
+        }
+    ],
+    "require": {
+<<<<<<< HEAD
+        "php": "^7.3|^8.0"
+    },
+    "require-dev": {
+        "nesbot/carbon": "^2.61",
+        "pestphp/pest": "^1.21.3",
+        "phpstan/phpstan": "^1.8.2",
+        "symfony/var-dumper": "^5.4.11"
+=======
+        "php": "^8.1"
+    },
+    "require-dev": {
+        "illuminate/support": "^10.0|^11.0|^12.0",
+        "nesbot/carbon": "^2.67|^3.0",
+        "pestphp/pest": "^2.36|^3.0",
+        "phpstan/phpstan": "^2.0",
+        "symfony/var-dumper": "^6.2.0|^7.0.0"
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)
+    },
+    "autoload": {
+        "psr-4": {
+            "Laravel\\SerializableClosure\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+<<<<<<< HEAD
+            "dev-master": "1.x-dev"
+=======
+            "dev-master": "2.x-dev"
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

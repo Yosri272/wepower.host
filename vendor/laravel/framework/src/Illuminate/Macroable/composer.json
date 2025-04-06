@@ -1,0 +1,41 @@
+{
+    "name": "illuminate/macroable",
+    "description": "The Illuminate Macroable package.",
+    "license": "MIT",
+    "homepage": "https://laravel.com",
+    "support": {
+        "issues": "https://github.com/laravel/framework/issues",
+        "source": "https://github.com/laravel/framework"
+    },
+    "authors": [
+        {
+            "name": "Taylor Otwell",
+            "email": "taylor@laravel.com"
+        }
+    ],
+    "require": {
+<<<<<<< HEAD
+        "php": "^8.1"
+=======
+        "php": "^8.2"
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)
+    },
+    "autoload": {
+        "psr-4": {
+            "Illuminate\\Support\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+<<<<<<< HEAD
+            "dev-master": "10.x-dev"
+=======
+            "dev-master": "11.x-dev"
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev"
+}

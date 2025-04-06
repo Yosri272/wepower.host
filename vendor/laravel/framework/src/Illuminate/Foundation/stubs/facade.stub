@@ -1,0 +1,23 @@
+<?php
+
+namespace DummyNamespace;
+
+use Illuminate\Support\Facades\Facade;
+
+/**
+<<<<<<< HEAD
+ * @see \DummyTarget
+=======
+ * @mixin \DummyTarget
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)
+ */
+class DummyClass extends Facade
+{
+    /**
+     * Get the registered name of the component.
+     */
+    protected static function getFacadeAccessor(): string
+    {
+        return 'DummyTarget';
+    }
+}

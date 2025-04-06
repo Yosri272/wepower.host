@@ -1,0 +1,56 @@
+{
+    "name": "illuminate/events",
+    "description": "The Illuminate Events package.",
+    "license": "MIT",
+    "homepage": "https://laravel.com",
+    "support": {
+        "issues": "https://github.com/laravel/framework/issues",
+        "source": "https://github.com/laravel/framework"
+    },
+    "authors": [
+        {
+            "name": "Taylor Otwell",
+            "email": "taylor@laravel.com"
+        }
+    ],
+    "require": {
+<<<<<<< HEAD
+        "php": "^8.1",
+        "illuminate/bus": "^10.0",
+        "illuminate/collections": "^10.0",
+        "illuminate/container": "^10.0",
+        "illuminate/contracts": "^10.0",
+        "illuminate/macroable": "^10.0",
+        "illuminate/support": "^10.0"
+=======
+        "php": "^8.2",
+        "illuminate/bus": "^11.0",
+        "illuminate/collections": "^11.0",
+        "illuminate/container": "^11.0",
+        "illuminate/contracts": "^11.0",
+        "illuminate/macroable": "^11.0",
+        "illuminate/support": "^11.0"
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)
+    },
+    "autoload": {
+        "psr-4": {
+            "Illuminate\\Events\\": ""
+        },
+        "files": [
+            "functions.php"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+<<<<<<< HEAD
+            "dev-master": "10.x-dev"
+=======
+            "dev-master": "11.x-dev"
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev"
+}

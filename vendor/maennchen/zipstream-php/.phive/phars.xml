@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phive xmlns="https://phar.io/phive">
+<<<<<<< HEAD
+  <phar name="phpdocumentor" version="^3.3.1" installed="3.3.1" location="./tools/phpdocumentor" copy="false"/>
+=======
+  <phar name="phpdocumentor" version="^3.3.1" installed="3.6.0" location="./tools/phpdocumentor" copy="false"/>
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)
+</phive>

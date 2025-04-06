@@ -1,0 +1,90 @@
+{
+    "name": "nunomaduro/termwind",
+    "description": "Its like Tailwind CSS, but for the console.",
+    "keywords": ["php", "cli", "package", "console", "css", "style"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nuno Maduro",
+            "email": "enunomaduro@gmail.com"
+        }
+    ],
+    "require": {
+<<<<<<< HEAD
+        "php": "^8.0",
+        "ext-mbstring": "*",
+        "symfony/console": "^5.3.0|^6.0.0"
+    },
+    "require-dev": {
+        "ergebnis/phpstan-rules": "^1.0.",
+        "illuminate/console": "^8.0|^9.0",
+        "illuminate/support": "^8.0|^9.0",
+        "laravel/pint": "^1.0.0",
+        "pestphp/pest": "^1.21.0",
+        "pestphp/pest-plugin-mock": "^1.0",
+        "phpstan/phpstan": "^1.4.6",
+        "phpstan/phpstan-strict-rules": "^1.1.0",
+        "symfony/var-dumper": "^5.2.7|^6.0.0",
+=======
+        "php": "^8.2",
+        "ext-mbstring": "*",
+        "symfony/console": "^7.1.8"
+    },
+    "require-dev": {
+        "illuminate/console": "^11.33.2",
+        "laravel/pint": "^1.18.2",
+        "mockery/mockery": "^1.6.12",
+        "pestphp/pest": "^2.36.0",
+        "phpstan/phpstan": "^1.12.11",
+        "phpstan/phpstan-strict-rules": "^1.6.1",
+        "symfony/var-dumper": "^7.1.8",
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)
+        "thecodingmachine/phpstan-strict-rules": "^1.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Termwind\\": "src/"
+        },
+        "files": [
+            "src/Functions.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist",
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "scripts": {
+        "lint": "pint -v",
+        "test:lint": "pint --test -v",
+        "test:types": "phpstan analyse --ansi",
+        "test:unit": "pest --colors=always",
+        "test": [
+            "@test:lint",
+            "@test:types",
+            "@test:unit"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Termwind\\Laravel\\TermwindServiceProvider"
+            ]
+<<<<<<< HEAD
+=======
+        },
+        "branch-alias": {
+            "dev-2.x": "2.x-dev"
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)
+        }
+    }
+}

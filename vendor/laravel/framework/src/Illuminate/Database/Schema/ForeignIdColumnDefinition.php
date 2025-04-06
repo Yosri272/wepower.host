@@ -1,0 +1,67 @@
+<?php
+
+namespace Illuminate\Database\Schema;
+
+<<<<<<< HEAD
+use Illuminate\Support\Str;
+=======
+use Illuminate\Support\Stringable;
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)
+
+class ForeignIdColumnDefinition extends ColumnDefinition
+{
+    /**
+     * The schema builder blueprint instance.
+     *
+     * @var \Illuminate\Database\Schema\Blueprint
+     */
+    protected $blueprint;
+
+    /**
+     * Create a new foreign ID column definition.
+     *
+     * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
+     * @param  array  $attributes
+     * @return void
+     */
+    public function __construct(Blueprint $blueprint, $attributes = [])
+    {
+        parent::__construct($attributes);
+
+        $this->blueprint = $blueprint;
+    }
+
+    /**
+     * Create a foreign key constraint on this column referencing the "id" column of the conventionally related table.
+     *
+     * @param  string|null  $table
+     * @param  string|null  $column
+     * @param  string|null  $indexName
+     * @return \Illuminate\Database\Schema\ForeignKeyDefinition
+     */
+<<<<<<< HEAD
+    public function constrained($table = null, $column = 'id', $indexName = null)
+    {
+        return $this->references($column, $indexName)->on($table ?? Str::of($this->name)->beforeLast('_'.$column)->plural());
+=======
+    public function constrained($table = null, $column = null, $indexName = null)
+    {
+        $table ??= $this->table;
+        $column ??= $this->referencesModelColumn ?? 'id';
+
+        return $this->references($column, $indexName)->on($table ?? (new Stringable($this->name))->beforeLast('_'.$column)->plural());
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)
+    }
+
+    /**
+     * Specify which column this foreign ID references on another table.
+     *
+     * @param  string  $column
+     * @param  string  $indexName
+     * @return \Illuminate\Database\Schema\ForeignKeyDefinition
+     */
+    public function references($column, $indexName = null)
+    {
+        return $this->blueprint->foreign($this->name, $indexName)->references($column);
+    }
+}

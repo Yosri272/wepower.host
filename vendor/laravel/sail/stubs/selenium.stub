@@ -1,0 +1,12 @@
+selenium:
+<<<<<<< HEAD
+    image: 'selenium/standalone-chrome'
+=======
+    image: 'selenium/standalone-chromium'
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)
+    extra_hosts:
+        - 'host.docker.internal:host-gateway'
+    volumes:
+        - '/dev/shm:/dev/shm'
+    networks:
+        - sail

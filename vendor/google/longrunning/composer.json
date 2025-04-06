@@ -1,0 +1,34 @@
+{
+    "name": "google/longrunning",
+    "description": "Google LongRunning Client for PHP",
+    "license": "Apache-2.0",
+    "minimum-stability": "stable",
+<<<<<<< HEAD
+    "version": "0.4.3",
+=======
+    "version": "0.4.7",
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)
+    "autoload": {
+        "psr-4": {
+            "Google\\ApiCore\\LongRunning\\": "src/ApiCore/LongRunning",
+            "Google\\LongRunning\\": "src/LongRunning",
+            "GPBMetadata\\Google\\Longrunning\\": "metadata/Longrunning"
+        }
+    },
+    "extra": {
+        "component": {
+            "id": "longrunning",
+            "path": "LongRunning",
+            "entry": null,
+            "target": "googleapis/php-longrunning"
+        }
+    },
+    "require-dev": {
+<<<<<<< HEAD
+        "google/gax": "^1.34.0",
+=======
+        "google/gax": "^1.36.0",
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)
+        "phpunit/phpunit": "^9.0"
+    }
+}

@@ -1,0 +1,66 @@
+{
+    "name": "illuminate/notifications",
+    "description": "The Illuminate Notifications package.",
+    "license": "MIT",
+    "homepage": "https://laravel.com",
+    "support": {
+        "issues": "https://github.com/laravel/framework/issues",
+        "source": "https://github.com/laravel/framework"
+    },
+    "authors": [
+        {
+            "name": "Taylor Otwell",
+            "email": "taylor@laravel.com"
+        }
+    ],
+    "require": {
+<<<<<<< HEAD
+        "php": "^8.1",
+        "illuminate/broadcasting": "^10.0",
+        "illuminate/bus": "^10.0",
+        "illuminate/collections": "^10.0",
+        "illuminate/container": "^10.0",
+        "illuminate/contracts": "^10.0",
+        "illuminate/filesystem": "^10.0",
+        "illuminate/mail": "^10.0",
+        "illuminate/queue": "^10.0",
+        "illuminate/support": "^10.0"
+=======
+        "php": "^8.2",
+        "illuminate/broadcasting": "^11.0",
+        "illuminate/bus": "^11.0",
+        "illuminate/collections": "^11.0",
+        "illuminate/container": "^11.0",
+        "illuminate/contracts": "^11.0",
+        "illuminate/filesystem": "^11.0",
+        "illuminate/mail": "^11.0",
+        "illuminate/queue": "^11.0",
+        "illuminate/support": "^11.0"
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)
+    },
+    "autoload": {
+        "psr-4": {
+            "Illuminate\\Notifications\\": ""
+        }
+    },
+    "extra": {
+        "branch-alias": {
+<<<<<<< HEAD
+            "dev-master": "10.x-dev"
+        }
+    },
+    "suggest": {
+        "illuminate/database": "Required to use the database transport (^10.0)."
+=======
+            "dev-master": "11.x-dev"
+        }
+    },
+    "suggest": {
+        "illuminate/database": "Required to use the database transport (^11.0)."
+>>>>>>> aa6c636e1 (أول رفع لموقع wepower.host)
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev"
+}
